@@ -23,12 +23,4 @@ base=$2
 sub=$3
 name=$4
 
-if [[ -z $sub ]]; then
-    docker exec -it $id sh -c "$base"
-else
-    if [[ -z $name ]]; then
-        docker exec -it $id sh -c "$base $sub"
-    else
-        docker exec -it $id sh -c "$base $sub $name"
-    fi
-fi
+docker exec -it $id sh -c "$base $sub $name"
