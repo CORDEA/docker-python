@@ -24,3 +24,4 @@ sub=$3
 name=$4
 
 docker exec -it $id sh -c "$base $sub $name"
+docker commit $id $id:command
