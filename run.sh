@@ -18,5 +18,5 @@
 # Author: Yoshihiro Tanaka <contact@cordea.jp>
 # date  : 2017-03-25
 
-docker run -it -d --name python python:command /bin/sh
-docker run -it -d --name python3 python3:command /bin/sh
+docker run -it -d -v $HOME:$HOME -w $HOME --name python python:command /bin/sh
+docker run -it -d -v $HOME:$HOME -w $HOME --name python3 python3:command /bin/sh

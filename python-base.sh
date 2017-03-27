@@ -25,9 +25,6 @@ id=$base
 if [[ -z $path ]]; then
     docker exec -it $id sh -c $base
 else
-    name=`basename $path`
-    dest="/home/$name"
-    docker cp $path $id:$dest
-    docker exec -it $id sh -c "$base $dest"
-    docker exec -it $id sh -c "rm $dest"
+    filepath="`pwd`/`basename $path`"
+    docker exec -it $id sh -c "$base $filepath"
 fi
