@@ -20,4 +20,4 @@
 
 path=$1
 
-./python-base.sh python $path
+$(dirname $(readlink "$0"))/python-base.sh python $path

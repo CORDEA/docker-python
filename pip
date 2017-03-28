@@ -22,4 +22,4 @@ sub=$1
 name=$2
 id=python
 
-./pip-base.sh $id pip $sub $name
+$(dirname $(readlink "$0"))/pip-base.sh $id pip $sub $name
